@@ -16,27 +16,25 @@ struct HTMLParser {
         var articles = [Article]()
         do {
             let doc: Document = try SwiftSoup.parse(htmlString)
-            guard let entryElement = try doc.select("ul.EntryList").first() else {
-                return [Article]()
-            }
+            let entries = try doc.select("ul.EntryList").select("li.item")
+            let numOfEntries = entries.count
 
-            let numOfEntry = 25
-            for entryIndex in 0..<(numOfEntry - 1) {
+            for entryIndex in 0..<(numOfEntries - 1) {
                 let date = findElementString {
-                    try entryElement.select("div.date")[safe: entryIndex]?.text()
+                    try entries[safe: entryIndex]?.select("div.date").text()
                 }
                 let name = findElementString {
-                    try entryElement.select("div.user")[safe: entryIndex]?.text()
+                    try entries[safe: entryIndex]?.select("div.user").text()
                 }
                 let url = findElementString {
-                    try entryElement.select("div.article")[safe: entryIndex]?.select("div.link").first()?.text()
+                    try entries[safe: entryIndex]?.select("div.article").select("div.link").first()?.text()
                 }
                 let linkAndTitleText = findElementString {
-                    try entryElement.select("div.left")[safe: entryIndex]?.text()
+                    try entries[safe: entryIndex]?.select("div.left").text()
                 }
                 let title = linkAndTitleText.replacingOccurrences(of: url + " ", with: "")
                 let iconImage = findElementString {
-                    try entryElement.select("img")[safe: entryIndex]?.attr("src")
+                    try entries[safe: entryIndex]?.select("div.user").select("img").attr("src")
                 }
 
                 let article = Article(

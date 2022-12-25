@@ -11,20 +11,24 @@ import SwiftSoup
 class AdventarViewModel: ObservableObject {
     @Published var text = ""
     @Published var errorMessage = ""
-    private var articles = [Article]()
+    @Published var articles = [Article]()
 
     func getArticles() {
         // APIクライアントの作成
         let client = AdventarClient(httpClient: URLSession.shared)
 
         // リクエストの発行
-        let request = AdventarAPI.GetCalendars(keyword: "7577")
+        let request = AdventarAPI.GetCalendars(keyword: "7632")
 
         // リクエストの送信
-        client.send(request: request) { result in
+        client.send(request: request) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let response):
                 print(response)
+                DispatchQueue.main.async {
+                    self.articles = response
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }
