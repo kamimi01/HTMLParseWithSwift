@@ -8,7 +8,7 @@
 import Foundation
 import SwiftSoup
 
-class HTMLParser {
+struct HTMLParser {
     /// 文字列をパースして記事の配列を作成する
     /// - Parameter htmlString: HTMLの文字列
     /// - Returns: 記事の配列
@@ -39,13 +39,13 @@ class HTMLParser {
                     try entryElement.select("img")[safe: entryIndex]?.attr("src")
                 }
 
-                let article = Article()
-                article.date = date
-                article.name = name
-                article.url = url
-                article.title = title
-                article.iconImage = iconImage
-
+                let article = Article(
+                    date: date,
+                    name: name,
+                    url: url,
+                    title: title,
+                    iconImage: iconImage
+                )
                 articles.append(article)
             }
         } catch {

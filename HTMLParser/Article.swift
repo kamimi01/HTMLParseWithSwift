@@ -7,10 +7,10 @@
 
 import Foundation
 
-class Article {
-    var date = ""
-    var name = ""
-    var url = ""
-    var title = ""
-    var iconImage = ""
+struct Article {
+    let date: String
+    let name: String
+    let url: String
+    let title: String
+    let iconImage: String
 }
