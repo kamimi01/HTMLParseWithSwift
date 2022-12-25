@@ -90,3 +90,4 @@ fastlane/test_output
 iOSInjectionProject/
 
 HTMLParser/adventar.html
+.DS_Store

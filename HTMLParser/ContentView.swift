@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var parser = HTMLParser()
+    @ObservedObject var parser = AdventarViewModel()
 
     var body: some View {
         VStack {

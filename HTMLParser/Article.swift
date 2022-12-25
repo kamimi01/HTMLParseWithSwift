@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Article {
+class Article {
     var date = ""
     var name = ""
     var url = ""
