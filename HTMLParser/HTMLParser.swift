@@ -29,10 +29,13 @@ struct HTMLParser {
                 let url = findElementString {
                     try entries[safe: entryIndex]?.select("div.article").select("div.link").first()?.text()
                 }
-                let linkAndTitleText = findElementString {
-                    try entries[safe: entryIndex]?.select("div.left").text()
+                let title = findElementString {
+                    let leftHTMLString = try entries[safe: entryIndex]?.select("div.left").html() ?? ""
+                    return try SwiftSoup.parse(leftHTMLString).select("div")[safe: 1]?.text()
                 }
-                let title = linkAndTitleText.replacingOccurrences(of: url + " ", with: "")
+                let comment = findElementString {
+                    try entries[safe: entryIndex]?.select("div.comment").text()
+                }
                 let iconImage = findElementString {
                     try entries[safe: entryIndex]?.select("div.user").select("img").attr("src")
                 }
@@ -41,7 +44,7 @@ struct HTMLParser {
                     date: date,
                     name: name,
                     url: url,
-                    title: title,
+                    title: title.isEmpty ? comment : title,
                     iconImage: iconImage
                 )
                 articles.append(article)
