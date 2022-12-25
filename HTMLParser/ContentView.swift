@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var parser = AdventarViewModel()
+    @ObservedObject var viewModel = AdventarViewModel()
 
     var body: some View {
         VStack {
@@ -17,7 +17,7 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
             Text(parsedText)
             Button(action: {
-                parse()
+                viewModel.getArticles()
             }) {
                 Text("パースする")
             }
@@ -27,15 +27,12 @@ struct ContentView: View {
 }
 
 private extension ContentView {
-    func parse() {
-        parser.parser()
-    }
 
     var parsedText: String {
-        if parser.errorMessage.isEmpty {
-            return parser.text
+        if viewModel.errorMessage.isEmpty {
+            return viewModel.text
         }
-        return parser.errorMessage
+        return viewModel.errorMessage
     }
 }
 

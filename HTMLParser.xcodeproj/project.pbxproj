@@ -10,6 +10,7 @@
 		D443834B2953204800620643 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443834A2953204800620643 /* HTTPClient.swift */; };
 		D443834D2953D12C00620643 /* AdventarClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443834C2953D12C00620643 /* AdventarClient.swift */; };
 		D443834F2957F43300620643 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443834E2957F43300620643 /* HTMLParser.swift */; };
+		D443835129580B4100620643 /* Element+ExtensioinArray+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443835029580B4100620643 /* Element+ExtensioinArray+Extension.swift */; };
 		D4CE1A3D294D8CCA00B4CDF5 /* HTMLParserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE1A3C294D8CCA00B4CDF5 /* HTMLParserApp.swift */; };
 		D4CE1A3F294D8CCA00B4CDF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE1A3E294D8CCA00B4CDF5 /* ContentView.swift */; };
 		D4CE1A41294D8CCE00B4CDF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CE1A40294D8CCE00B4CDF5 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		D443834A2953204800620643 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		D443834C2953D12C00620643 /* AdventarClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventarClient.swift; sourceTree = "<group>"; };
 		D443834E2957F43300620643 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
+		D443835029580B4100620643 /* Element+ExtensioinArray+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Element+ExtensioinArray+Extension.swift"; sourceTree = "<group>"; };
 		D4CE1A39294D8CCA00B4CDF5 /* HTMLParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTMLParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CE1A3C294D8CCA00B4CDF5 /* HTMLParserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParserApp.swift; sourceTree = "<group>"; };
 		D4CE1A3E294D8CCA00B4CDF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				D4CE1A4D294D8DAC00B4CDF5 /* AdventarViewModel.swift */,
 				D4F34E12295097A200B10B68 /* Article.swift */,
 				D443834E2957F43300620643 /* HTMLParser.swift */,
+				D443835029580B4100620643 /* Element+ExtensioinArray+Extension.swift */,
 			);
 			path = HTMLParser;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				D443834F2957F43300620643 /* HTMLParser.swift in Sources */,
 				D4F34E182951281000B10B68 /* AdventarRequest.swift in Sources */,
 				D4F34E13295097A200B10B68 /* Article.swift in Sources */,
+				D443835129580B4100620643 /* Element+ExtensioinArray+Extension.swift in Sources */,
 				D4F34E1A2951288A00B10B68 /* HTTPMethod.swift in Sources */,
 				D4F34E1C2951291F00B10B68 /* AdventarAPI.swift in Sources */,
 				D4F34E16295126D300B10B68 /* AdventarClientError.swift in Sources */,

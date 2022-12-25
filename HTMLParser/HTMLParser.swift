@@ -23,20 +23,20 @@ class HTMLParser {
             let numOfEntry = 25
             for entryIndex in 0..<(numOfEntry - 1) {
                 let date = findElementString {
-                    try entryElement.select("div.date")[entryIndex].text()
+                    try entryElement.select("div.date")[safe: entryIndex]?.text()
                 }
                 let name = findElementString {
-                    try entryElement.select("div.user")[entryIndex].text()
+                    try entryElement.select("div.user")[safe: entryIndex]?.text()
                 }
                 let url = findElementString {
-                    try entryElement.select("div.article")[entryIndex].select("div.link").first()?.text()
+                    try entryElement.select("div.article")[safe: entryIndex]?.select("div.link").first()?.text()
                 }
                 let linkAndTitleText = findElementString {
-                    try entryElement.select("div.left")[entryIndex].text()
+                    try entryElement.select("div.left")[safe: entryIndex]?.text()
                 }
                 let title = linkAndTitleText.replacingOccurrences(of: url + " ", with: "")
                 let iconImage = findElementString {
-                    try entryElement.select("img")[entryIndex].attr("src")
+                    try entryElement.select("img")[safe: entryIndex]?.attr("src")
                 }
 
                 let article = Article()

@@ -13,7 +13,7 @@ class AdventarViewModel: ObservableObject {
     @Published var errorMessage = ""
     private var articles = [Article]()
 
-    func parser() {
+    func getArticles() {
         // APIクライアントの作成
         let client = AdventarClient(httpClient: URLSession.shared)
 
