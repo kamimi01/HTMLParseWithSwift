@@ -29,7 +29,6 @@ extension AdventarRequest {
     }
 
     func response(from data: Data) -> [Article] {
-        // SwiftSoupを使って解析する
         guard let htmlString = String(data: data, encoding: .utf8) else {
             return [Article]()
         }

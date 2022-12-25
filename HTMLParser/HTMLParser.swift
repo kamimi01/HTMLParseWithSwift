@@ -9,6 +9,9 @@ import Foundation
 import SwiftSoup
 
 class HTMLParser {
+    /// 文字列をパースして記事の配列を作成する
+    /// - Parameter htmlString: HTMLの文字列
+    /// - Returns: 記事の配列
     static func parse(htmlString: String) -> [Article] {
         var articles = [Article]()
         do {
@@ -36,12 +39,6 @@ class HTMLParser {
                     try entryElement.select("img")[entryIndex].attr("src")
                 }
 
-                print(date)
-                print(name)
-                print(url)
-                print(title)
-                print(iconImage)
-
                 let article = Article()
                 article.date = date
                 article.name = name
@@ -50,20 +47,25 @@ class HTMLParser {
                 article.iconImage = iconImage
 
                 articles.append(article)
-                print(articles)
             }
         } catch {
-
+            print("failed to parse. cannot parse to Document or cannot find EntryList element: \(error.localizedDescription)")
         }
         return articles
     }
 
-    // 何か処理を行った時にエラーが投げられたら、空文字を返す
+    /// パースに失敗した文字列を返す
+    /// - Parameter completion: 文字列を返すSwiftSoupのメソッド
+    /// - Returns: パースした文字列。失敗した場合は空文字を返す
     static private func findElementString(completion: () throws -> String?) -> String {
         do {
-            return try completion() ?? ""
+            guard let parsedString = try completion() else {
+                print("failed to parse: string is nil so return empty string")
+                return ""
+            }
+            return parsedString
         } catch {
-            print(error.localizedDescription)
+            print("failed to parse: \(error.localizedDescription)")
             return ""
         }
     }

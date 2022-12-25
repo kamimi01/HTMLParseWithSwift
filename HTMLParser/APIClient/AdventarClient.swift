@@ -23,12 +23,8 @@ class AdventarClient {
         httpClient.sendRequest(urlRequest) { result in
             switch result {
             case .success((let data, _)):
-                do {
-                    let response = try request.response(from: data)
-                    completion(.success(response))
-                } catch {
-                    completion(.failure(.responseParseError(error)))
-                }
+                let response = request.response(from: data)
+                completion(.success(response))
             case .failure(let error):
                 completion(.failure(.connectionError(error)))
             }
