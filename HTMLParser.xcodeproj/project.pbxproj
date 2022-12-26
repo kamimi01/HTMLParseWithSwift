@@ -13,6 +13,10 @@
 		D443835129580B4100620643 /* Element+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443835029580B4100620643 /* Element+Extension.swift */; };
 		D44383552959139D00620643 /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44383542959139D00620643 /* SettingScreen.swift */; };
 		D443835729592BC100620643 /* ArticleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443835629592BC100620643 /* ArticleCardView.swift */; };
+		D443835A29595C6100620643 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D443835929595C6100620643 /* Lottie */; };
+		D443835C29595C8900620643 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443835B29595C8900620643 /* LottieView.swift */; };
+		D443835E29595CC700620643 /* empty-state.json in Resources */ = {isa = PBXBuildFile; fileRef = D443835D29595CC700620643 /* empty-state.json */; };
+		D44383602959607500620643 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = D443835F2959607500620643 /* loading.json */; };
 		D4CE1A3D294D8CCA00B4CDF5 /* HTMLParserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE1A3C294D8CCA00B4CDF5 /* HTMLParserApp.swift */; };
 		D4CE1A3F294D8CCA00B4CDF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE1A3E294D8CCA00B4CDF5 /* ContentView.swift */; };
 		D4CE1A41294D8CCE00B4CDF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CE1A40294D8CCE00B4CDF5 /* Assets.xcassets */; };
@@ -34,6 +38,9 @@
 		D443835029580B4100620643 /* Element+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Element+Extension.swift"; sourceTree = "<group>"; };
 		D44383542959139D00620643 /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 		D443835629592BC100620643 /* ArticleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardView.swift; sourceTree = "<group>"; };
+		D443835B29595C8900620643 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		D443835D29595CC700620643 /* empty-state.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "empty-state.json"; sourceTree = "<group>"; };
+		D443835F2959607500620643 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		D4CE1A39294D8CCA00B4CDF5 /* HTMLParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTMLParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CE1A3C294D8CCA00B4CDF5 /* HTMLParserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParserApp.swift; sourceTree = "<group>"; };
 		D4CE1A3E294D8CCA00B4CDF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4CE1A4C294D8D1700B4CDF5 /* SwiftSoup in Frameworks */,
+				D443835A29595C6100620643 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +93,15 @@
 				D44383542959139D00620643 /* SettingScreen.swift */,
 				D4CE1A4F294DFD5700B4CDF5 /* adventar.html */,
 				D4CE1A40294D8CCE00B4CDF5 /* Assets.xcassets */,
+				D443835D29595CC700620643 /* empty-state.json */,
+				D443835F2959607500620643 /* loading.json */,
 				D4CE1A42294D8CCE00B4CDF5 /* Preview Content */,
 				D4CE1A4D294D8DAC00B4CDF5 /* AdventarViewModel.swift */,
 				D4F34E12295097A200B10B68 /* Article.swift */,
 				D443834E2957F43300620643 /* HTMLParser.swift */,
 				D443835029580B4100620643 /* Element+Extension.swift */,
 				D443835629592BC100620643 /* ArticleCardView.swift */,
+				D443835B29595C8900620643 /* LottieView.swift */,
 			);
 			path = HTMLParser;
 			sourceTree = "<group>";
@@ -134,6 +145,7 @@
 			name = HTMLParser;
 			packageProductDependencies = (
 				D4CE1A4B294D8D1700B4CDF5 /* SwiftSoup */,
+				D443835929595C6100620643 /* Lottie */,
 			);
 			productName = HTMLParser;
 			productReference = D4CE1A39294D8CCA00B4CDF5 /* HTMLParser.app */;
@@ -165,6 +177,7 @@
 			mainGroup = D4CE1A30294D8CCA00B4CDF5;
 			packageReferences = (
 				D4CE1A4A294D8D1700B4CDF5 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				D443835829595C6100620643 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = D4CE1A3A294D8CCA00B4CDF5 /* Products */;
 			projectDirPath = "";
@@ -181,8 +194,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4CE1A44294D8CCE00B4CDF5 /* Preview Assets.xcassets in Resources */,
+				D443835E29595CC700620643 /* empty-state.json in Resources */,
 				D4CE1A50294DFD5700B4CDF5 /* adventar.html in Resources */,
 				D4CE1A41294D8CCE00B4CDF5 /* Assets.xcassets in Resources */,
+				D44383602959607500620643 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +214,7 @@
 				D443835129580B4100620643 /* Element+Extension.swift in Sources */,
 				D4F34E1A2951288A00B10B68 /* HTTPMethod.swift in Sources */,
 				D4F34E1C2951291F00B10B68 /* AdventarAPI.swift in Sources */,
+				D443835C29595C8900620643 /* LottieView.swift in Sources */,
 				D4F34E16295126D300B10B68 /* AdventarClientError.swift in Sources */,
 				D443835729592BC100620643 /* ArticleCardView.swift in Sources */,
 				D44383552959139D00620643 /* SettingScreen.swift in Sources */,
@@ -409,6 +425,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D443835829595C6100620643 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.1;
+			};
+		};
 		D4CE1A4A294D8D1700B4CDF5 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
@@ -420,6 +444,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D443835929595C6100620643 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D443835829595C6100620643 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		D4CE1A4B294D8D1700B4CDF5 /* SwiftSoup */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D4CE1A4A294D8D1700B4CDF5 /* XCRemoteSwiftPackageReference "SwiftSoup" */;

@@ -18,9 +18,13 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
                 switch viewModel.retreiveStatsu {
                 case .empty:
-                    Text("からです！")
+                    LottieView(animationType: .empty)
+                        .frame(width: 200, height: 200)
+                        .border(Color.red)
                 case .loading:
-                    Text("ローディング中です！")
+                    LottieView(animationType: .loading)
+                        .frame(width: 200, height: 200)
+                        .border(Color.red)
                 case .exist:
                     VStack {
                         ScrollView {
