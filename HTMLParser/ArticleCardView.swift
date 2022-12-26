@@ -16,7 +16,7 @@ struct ArticleCardView: View {
             openURL(URL(string: article.url)!)
         }) {
             VStack(alignment: .leading, spacing: 10) {
-                HStack(spacing: 15) {
+                HStack(spacing: 20) {
                     iconImage
                     Text(article.title)
                         .lineLimit(2)
@@ -61,7 +61,9 @@ private extension ArticleCardView {
                     .frame(maxWidth: 40, maxHeight: 40)
             },
             placeholder: {
-                ProgressView()
+                Image(systemName: "person.fill")
+                    .foregroundColor(Color.gray)
+                    .frame(maxWidth: 40, maxHeight: 40)
             }
         )
     }

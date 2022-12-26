@@ -19,12 +19,10 @@ struct ContentView: View {
                 switch viewModel.retreiveStatsu {
                 case .empty:
                     LottieView(animationType: .empty)
-                        .frame(width: 200, height: 200)
-                        .border(Color.red)
+                        .frame(width: 300, height: 300)
                 case .loading:
                     LottieView(animationType: .loading)
-                        .frame(width: 200, height: 200)
-                        .border(Color.red)
+                        .frame(width: 300, height: 300)
                 case .exist:
                     VStack {
                         ScrollView {
