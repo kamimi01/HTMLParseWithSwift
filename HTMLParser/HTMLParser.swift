@@ -30,7 +30,8 @@ struct HTMLParser {
                     try entries[safe: entryIndex]?.select("div.article").select("div.link").first()?.text()
                 }
                 let title = findElementString {
-                    let leftHTMLString = try entries[safe: entryIndex]?.select("div.left").html() ?? ""
+                    let leftHTMLElements = try entries[safe: entryIndex]?.select("div.left")
+                    let leftHTMLString = try leftHTMLElements?.html() ?? ""
                     return try SwiftSoup.parse(leftHTMLString).select("div")[safe: 1]?.text()
                 }
                 let comment = findElementString {

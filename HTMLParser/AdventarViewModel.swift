@@ -9,16 +9,16 @@ import Foundation
 import SwiftSoup
 
 class AdventarViewModel: ObservableObject {
-    @Published var text = ""
-    @Published var errorMessage = ""
     @Published var articles = [Article]()
+    @Published var searchKeyword = ""
 
     func getArticles() {
         // APIクライアントの作成
         let client = AdventarClient(httpClient: URLSession.shared)
 
         // リクエストの発行
-        let request = AdventarAPI.GetCalendars(keyword: "7632")
+        if searchKeyword.isEmpty { return }
+        let request = AdventarAPI.GetCalendars(keyword: searchKeyword)
 
         // リクエストの送信
         client.send(request: request) { [weak self] result in

@@ -9,14 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel = AdventarViewModel()
+    @State private var isShownSetting = false
 
     var body: some View {
         VStack {
-            Button(action: {
-                viewModel.getArticles()
-            }) {
-                Text("パースする")
-            }
+            settingButton
             ScrollView {
                 VStack(alignment: .leading) {
                     ForEach(viewModel.articles) { article in
@@ -48,18 +45,30 @@ struct ContentView: View {
                     }
                 }
             }
+//            .navigationTitle("カレンダー一覧")
+//            .navigationBarItems(leading: nil, trailing: settingButton)
+//            .navigationTitle("【ふりかえり】iOSグループでデイリーミーティングと雑談会をはじめました！")
+//            .navigationBarTitleDisplayMode(.inline)
+//            .navigationBarItems(
+//                leading: nil,
+//                trailing: settingButton
+//            )
         }
         .padding()
+        .sheet(isPresented: $isShownSetting) {
+            SettingScreen(searchKeyword: $viewModel.searchKeyword, viewModel: viewModel)
+        }
     }
 }
 
 private extension ContentView {
-
-    var parsedText: String {
-        if viewModel.errorMessage.isEmpty {
-            return viewModel.text
+    var settingButton: some View {
+        Button(action: {
+            print("右のボタンが押されたよ")
+            isShownSetting = true
+        }){
+            Image(systemName: "gearshape")
         }
-        return viewModel.errorMessage
     }
 }
 
