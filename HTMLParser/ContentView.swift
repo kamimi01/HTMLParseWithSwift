@@ -12,64 +12,54 @@ struct ContentView: View {
     @State private var isShownSetting = false
 
     var body: some View {
-        VStack {
-            settingButton
-            ScrollView {
-                VStack(alignment: .leading) {
-                    ForEach(viewModel.articles) { article in
-                        HStack(alignment: .top) {
-                            VStack(alignment: .leading) {
-                                Text(article.date)
-                                Text(article.name)
-                                AsyncImage(
-                                    url: URL(string: article.iconImage)!,
-                                    content: { image in
-                                        image.resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(maxWidth: 50, maxHeight: 50)
-                                    },
-                                    placeholder: {
-                                        ProgressView()
-                                    }
-                                )
+        NavigationView {
+            VStack {
+                ScrollView {
+                    VStack(alignment: .leading) {
+                        ForEach(viewModel.articles) { article in
+                            HStack(alignment: .top) {
+                                VStack(alignment: .leading) {
+                                    Text(article.date)
+                                    Text(article.name)
+                                    AsyncImage(
+                                        url: URL(string: article.iconImage)!,
+                                        content: { image in
+                                            image.resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(maxWidth: 50, maxHeight: 50)
+                                        },
+                                        placeholder: {
+                                            ProgressView()
+                                        }
+                                    )
+                                }
+                                .frame(width: 70)
+                                VStack(alignment: .leading) {
+                                    Text(article.title)
+                                    Text(article.url)
+                                        .font(.caption)
+                                }
                             }
-                            .frame(width: 70)
-                            VStack(alignment: .leading) {
-                                Text(article.title)
-                                Text(article.url)
-                                    .font(.caption)
-                            }
+                            Divider()
+                                .background(Color.red)
                         }
-                        Divider()
-                            .background(Color.red)
                     }
                 }
             }
-//            .navigationTitle("カレンダー一覧")
-//            .navigationBarItems(leading: nil, trailing: settingButton)
-//            .navigationTitle("【ふりかえり】iOSグループでデイリーミーティングと雑談会をはじめました！")
-//            .navigationBarTitleDisplayMode(.inline)
-//            .navigationBarItems(
-//                leading: nil,
-//                trailing: settingButton
-//            )
         }
         .padding()
-        .sheet(isPresented: $isShownSetting) {
-            SettingScreen(searchKeyword: $viewModel.searchKeyword, viewModel: viewModel)
+        .searchable(
+            text: $viewModel.searchKeyword,
+            placement: .navigationBarDrawer(displayMode: .always),
+            prompt: "7577"
+        )
+        .onSubmit(of: .search) {
+            viewModel.getArticles()
         }
     }
 }
 
 private extension ContentView {
-    var settingButton: some View {
-        Button(action: {
-            print("右のボタンが押されたよ")
-            isShownSetting = true
-        }){
-            Image(systemName: "gearshape")
-        }
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
