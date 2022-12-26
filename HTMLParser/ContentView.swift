@@ -13,17 +13,23 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 10) {
-                        ForEach(viewModel.articles) { article in
-                            ArticleCardView(article: article)
+            ZStack {
+//                Color(red: 135, green: 206, blue: 250)
+//                    .edgesIgnoringSafeArea(.all)
+                Color.gray.edgesIgnoringSafeArea(.all)
+                VStack {
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 10) {
+                            ForEach(viewModel.articles) { article in
+                                ArticleCardView(article: article)
+                                    .padding(.horizontal, 16)
+                            }
                         }
                     }
                 }
             }
+            .navigationTitle("Advent Counter")
         }
-        .padding()
         .searchable(
             text: $viewModel.searchKeyword,
             placement: .navigationBarDrawer(displayMode: .always),

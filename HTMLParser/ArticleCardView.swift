@@ -35,8 +35,8 @@ struct ArticleCardView: View {
         }
         .padding(10)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.pink)
-        .cornerRadius(15)
+        .background(Color.white)
+        .cornerRadius(10)
     }
 }
 
