@@ -16,15 +16,24 @@ struct ContentView: View {
             ZStack {
                 Color(red: 255 / 255, green: 228 / 255, blue: 225 / 255)
                     .edgesIgnoringSafeArea(.all)
-                VStack {
-                    ScrollView {
-                        VStack(alignment: .leading, spacing: 10) {
-                            ForEach(viewModel.articles) { article in
-                                ArticleCardView(article: article)
-                                    .padding(.horizontal, 16)
+                switch viewModel.retreiveStatsu {
+                case .empty:
+                    Text("からです！")
+                case .loading:
+                    Text("ローディング中です！")
+                case .exist:
+                    VStack {
+                        ScrollView {
+                            VStack(alignment: .leading, spacing: 10) {
+                                ForEach(viewModel.articles) { article in
+                                    ArticleCardView(article: article)
+                                        .padding(.horizontal, 16)
+                                }
                             }
                         }
                     }
+                case .error:
+                    Text("エラーです！")
                 }
             }
             .navigationTitle("Advent Counter")

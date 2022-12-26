@@ -8,11 +8,20 @@
 import Foundation
 import SwiftSoup
 
+enum RetreiveStatus {
+    case empty
+    case loading
+    case exist
+    case error
+}
+
 class AdventarViewModel: ObservableObject {
     @Published var articles = [Article]()
     @Published var searchKeyword = ""
+    @Published var retreiveStatsu = RetreiveStatus.empty
 
     func getArticles() {
+        retreiveStatsu = .loading
         // APIクライアントの作成
         let client = AdventarClient(httpClient: URLSession.shared)
 
@@ -26,10 +35,18 @@ class AdventarViewModel: ObservableObject {
             switch result {
             case .success(let response):
                 print(response)
+                if response.count == 0 {
+                    DispatchQueue.main.async {
+                        self.retreiveStatsu = .empty
+                    }
+                    return
+                }
                 DispatchQueue.main.async {
+                    self.retreiveStatsu = .exist
                     self.articles = response
                 }
             case .failure(let error):
+                self.retreiveStatsu = .error
                 print(error.localizedDescription)
             }
         }

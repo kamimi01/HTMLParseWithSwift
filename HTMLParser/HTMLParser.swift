@@ -18,6 +18,9 @@ struct HTMLParser {
             let doc: Document = try SwiftSoup.parse(htmlString)
             let entries = try doc.select("ul.EntryList").select("li.item")
             let numOfEntries = entries.count
+            if numOfEntries == 0 {
+                return articles
+            }
 
             for entryIndex in 0..<(numOfEntries - 1) {
                 let date = findElementString {
