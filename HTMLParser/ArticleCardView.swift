@@ -9,34 +9,44 @@ import SwiftUI
 
 struct ArticleCardView: View {
     let article: Article
+    @Environment(\.openURL) var openURL
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 15) {
-                iconImage
-                Text(article.title)
-                    .lineLimit(2)
-                    .font(.headline)
-            }
-            HStack(spacing: 30) {
-                VStack(alignment: .leading) {
-                    Text("Created at:")
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                    Text(article.date)
+        Button(action: {
+            openURL(URL(string: article.url)!)
+        }) {
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(spacing: 15) {
+                    iconImage
+                    Text(article.title)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                        .font(.headline)
+                        .foregroundColor(Color(red: 51 / 255, green: 51 / 255, blue: 51 / 255))
                 }
-                VStack(alignment: .leading) {
-                    Text("Written by:")
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                    Text(article.name)
+                HStack(spacing: 30) {
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("Created at:")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                        Text(article.date)
+                            .foregroundColor(Color(red: 51 / 255, green: 51 / 255, blue: 51 / 255))
+                    }
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("Written by:")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                        Text(article.name)
+                            .lineLimit(1)
+                            .foregroundColor(Color(red: 51 / 255, green: 51 / 255, blue: 51 / 255))
+                    }
                 }
             }
+            .padding(10)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color.white)
+            .cornerRadius(10)
         }
-        .padding(10)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.white)
-        .cornerRadius(10)
     }
 }
 

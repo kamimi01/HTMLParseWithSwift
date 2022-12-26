@@ -14,9 +14,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-//                Color(red: 135, green: 206, blue: 250)
-//                    .edgesIgnoringSafeArea(.all)
-                Color.gray.edgesIgnoringSafeArea(.all)
+                Color(red: 255 / 255, green: 228 / 255, blue: 225 / 255)
+                    .edgesIgnoringSafeArea(.all)
                 VStack {
                     ScrollView {
                         VStack(alignment: .leading, spacing: 10) {
