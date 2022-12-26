@@ -12,6 +12,7 @@
 		D443834F2957F43300620643 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443834E2957F43300620643 /* HTMLParser.swift */; };
 		D443835129580B4100620643 /* Element+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443835029580B4100620643 /* Element+Extension.swift */; };
 		D44383552959139D00620643 /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44383542959139D00620643 /* SettingScreen.swift */; };
+		D443835729592BC100620643 /* ArticleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443835629592BC100620643 /* ArticleCardView.swift */; };
 		D4CE1A3D294D8CCA00B4CDF5 /* HTMLParserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE1A3C294D8CCA00B4CDF5 /* HTMLParserApp.swift */; };
 		D4CE1A3F294D8CCA00B4CDF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE1A3E294D8CCA00B4CDF5 /* ContentView.swift */; };
 		D4CE1A41294D8CCE00B4CDF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CE1A40294D8CCE00B4CDF5 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		D443834E2957F43300620643 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
 		D443835029580B4100620643 /* Element+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Element+Extension.swift"; sourceTree = "<group>"; };
 		D44383542959139D00620643 /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
+		D443835629592BC100620643 /* ArticleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardView.swift; sourceTree = "<group>"; };
 		D4CE1A39294D8CCA00B4CDF5 /* HTMLParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTMLParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CE1A3C294D8CCA00B4CDF5 /* HTMLParserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParserApp.swift; sourceTree = "<group>"; };
 		D4CE1A3E294D8CCA00B4CDF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				D4F34E12295097A200B10B68 /* Article.swift */,
 				D443834E2957F43300620643 /* HTMLParser.swift */,
 				D443835029580B4100620643 /* Element+Extension.swift */,
+				D443835629592BC100620643 /* ArticleCardView.swift */,
 			);
 			path = HTMLParser;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				D4F34E1A2951288A00B10B68 /* HTTPMethod.swift in Sources */,
 				D4F34E1C2951291F00B10B68 /* AdventarAPI.swift in Sources */,
 				D4F34E16295126D300B10B68 /* AdventarClientError.swift in Sources */,
+				D443835729592BC100620643 /* ArticleCardView.swift in Sources */,
 				D44383552959139D00620643 /* SettingScreen.swift in Sources */,
 				D443834D2953D12C00620643 /* AdventarClient.swift in Sources */,
 				D443834B2953204800620643 /* HTTPClient.swift in Sources */,

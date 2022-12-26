@@ -15,33 +15,9 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 ScrollView {
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 10) {
                         ForEach(viewModel.articles) { article in
-                            HStack(alignment: .top) {
-                                VStack(alignment: .leading) {
-                                    Text(article.date)
-                                    Text(article.name)
-                                    AsyncImage(
-                                        url: URL(string: article.iconImage)!,
-                                        content: { image in
-                                            image.resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .frame(maxWidth: 50, maxHeight: 50)
-                                        },
-                                        placeholder: {
-                                            ProgressView()
-                                        }
-                                    )
-                                }
-                                .frame(width: 70)
-                                VStack(alignment: .leading) {
-                                    Text(article.title)
-                                    Text(article.url)
-                                        .font(.caption)
-                                }
-                            }
-                            Divider()
-                                .background(Color.red)
+                            ArticleCardView(article: article)
                         }
                     }
                 }
