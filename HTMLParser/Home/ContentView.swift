@@ -16,26 +16,30 @@ struct ContentView: View {
             ZStack {
                 Color(red: 255 / 255, green: 228 / 255, blue: 225 / 255)
                     .edgesIgnoringSafeArea(.all)
-                switch viewModel.retreiveStatsu {
-                case .empty:
-                    LottieView(animationType: .empty)
-                        .frame(width: 300, height: 300)
-                case .loading:
-                    LottieView(animationType: .loading)
-                        .frame(width: 300, height: 300)
-                case .exist:
-                    VStack {
-                        ScrollView {
-                            VStack(alignment: .leading, spacing: 10) {
-                                ForEach(viewModel.articles) { article in
-                                    ArticleCardView(article: article)
-                                        .padding(.horizontal, 16)
+                VStack {
+                    CountDownView()
+                    switch viewModel.retreiveStatsu {
+                    case .empty:
+                        LottieView(animationType: .empty)
+                            .frame(width: 300, height: 300)
+                    case .loading:
+                        LottieView(animationType: .loading)
+                            .frame(width: 300, height: 300)
+                    case .exist:
+                        VStack {
+                            ScrollView {
+                                VStack(alignment: .leading, spacing: 10) {
+                                    ForEach(viewModel.articles) { article in
+                                        ArticleCardView(article: article)
+                                            .padding(.horizontal, 16)
+                                    }
                                 }
                             }
                         }
+                    case .error:
+                        Text("エラーです！")
                     }
-                case .error:
-                    Text("エラーです！")
+                    Spacer()
                 }
             }
             .navigationTitle("Advent Counter")
