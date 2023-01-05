@@ -11,7 +11,6 @@
 		D443834D2953D12C00620643 /* AdventarClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443834C2953D12C00620643 /* AdventarClient.swift */; };
 		D443834F2957F43300620643 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443834E2957F43300620643 /* HTMLParser.swift */; };
 		D443835129580B4100620643 /* Element+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443835029580B4100620643 /* Element+Extension.swift */; };
-		D44383552959139D00620643 /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44383542959139D00620643 /* SettingScreen.swift */; };
 		D443835729592BC100620643 /* ArticleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443835629592BC100620643 /* ArticleCardView.swift */; };
 		D443835A29595C6100620643 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D443835929595C6100620643 /* Lottie */; };
 		D443835C29595C8900620643 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443835B29595C8900620643 /* LottieView.swift */; };
@@ -36,7 +35,6 @@
 		D443834C2953D12C00620643 /* AdventarClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventarClient.swift; sourceTree = "<group>"; };
 		D443834E2957F43300620643 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
 		D443835029580B4100620643 /* Element+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Element+Extension.swift"; sourceTree = "<group>"; };
-		D44383542959139D00620643 /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 		D443835629592BC100620643 /* ArticleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardView.swift; sourceTree = "<group>"; };
 		D443835B29595C8900620643 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D443835D29595CC700620643 /* empty-state.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "empty-state.json"; sourceTree = "<group>"; };
@@ -68,6 +66,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D49D1FCD29677BC80050EA60 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D4CE1A3E294D8CCA00B4CDF5 /* ContentView.swift */,
+				D4CE1A4D294D8DAC00B4CDF5 /* AdventarViewModel.swift */,
+				D443835629592BC100620643 /* ArticleCardView.swift */,
+				D443835B29595C8900620643 /* LottieView.swift */,
+				D443834E2957F43300620643 /* HTMLParser.swift */,
+				D4F34E12295097A200B10B68 /* Article.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D49D1FCE29677BFA0050EA60 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D443835029580B4100620643 /* Element+Extension.swift */,
+				D44383612959D94800620643 /* Date+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		D4CE1A30294D8CCA00B4CDF5 = {
 			isa = PBXGroup;
 			children = (
@@ -87,21 +107,14 @@
 		D4CE1A3B294D8CCA00B4CDF5 /* HTMLParser */ = {
 			isa = PBXGroup;
 			children = (
+				D49D1FCD29677BC80050EA60 /* Home */,
 				D4F34E14295125D100B10B68 /* APIClient */,
 				D4CE1A3C294D8CCA00B4CDF5 /* HTMLParserApp.swift */,
-				D4CE1A3E294D8CCA00B4CDF5 /* ContentView.swift */,
-				D44383542959139D00620643 /* SettingScreen.swift */,
 				D4CE1A40294D8CCE00B4CDF5 /* Assets.xcassets */,
 				D443835D29595CC700620643 /* empty-state.json */,
 				D443835F2959607500620643 /* loading.json */,
+				D49D1FCE29677BFA0050EA60 /* Extension */,
 				D4CE1A42294D8CCE00B4CDF5 /* Preview Content */,
-				D4CE1A4D294D8DAC00B4CDF5 /* AdventarViewModel.swift */,
-				D4F34E12295097A200B10B68 /* Article.swift */,
-				D443834E2957F43300620643 /* HTMLParser.swift */,
-				D443835029580B4100620643 /* Element+Extension.swift */,
-				D443835629592BC100620643 /* ArticleCardView.swift */,
-				D443835B29595C8900620643 /* LottieView.swift */,
-				D44383612959D94800620643 /* Date+Extension.swift */,
 			);
 			path = HTMLParser;
 			sourceTree = "<group>";
@@ -217,7 +230,6 @@
 				D443835C29595C8900620643 /* LottieView.swift in Sources */,
 				D4F34E16295126D300B10B68 /* AdventarClientError.swift in Sources */,
 				D443835729592BC100620643 /* ArticleCardView.swift in Sources */,
-				D44383552959139D00620643 /* SettingScreen.swift in Sources */,
 				D443834D2953D12C00620643 /* AdventarClient.swift in Sources */,
 				D443834B2953204800620643 /* HTTPClient.swift in Sources */,
 				D4CE1A4E294D8DAC00B4CDF5 /* AdventarViewModel.swift in Sources */,
