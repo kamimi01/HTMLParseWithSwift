@@ -15,16 +15,9 @@ struct ArticleCardView: View {
         Button(action: {
             openURL(URL(string: article.url)!)
         }) {
-            VStack(alignment: .leading, spacing: 10) {
-                HStack(spacing: 20) {
+            HStack {
+                VStack(alignment: .center, spacing: 10) {
                     iconImage
-                    Text(article.title)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-                        .font(.headline)
-                        .foregroundColor(Color(red: 51 / 255, green: 51 / 255, blue: 51 / 255))
-                }
-                HStack(spacing: 30) {
                     VStack(alignment: .leading, spacing: 3) {
                         Text("Created at:")
                             .font(.caption)
@@ -32,6 +25,13 @@ struct ArticleCardView: View {
                         Text(article.date)
                             .foregroundColor(Color(red: 51 / 255, green: 51 / 255, blue: 51 / 255))
                     }
+                }
+                VStack(alignment: .leading, spacing: 10) {
+                    Text(article.title)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                        .font(.headline)
+                        .foregroundColor(Color(red: 51 / 255, green: 51 / 255, blue: 51 / 255))
                     VStack(alignment: .leading, spacing: 3) {
                         Text("Written by:")
                             .font(.caption)
