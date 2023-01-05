@@ -16,6 +16,13 @@ struct HTMLParser {
         var articles = [Article]()
         do {
             let doc: Document = try SwiftSoup.parse(htmlString)
+
+            // createdYearは使用されていない
+            let calendarTitle = findElementString {
+                try doc.select("h2.title").text()
+            }
+            let createdYear = calendarTitle.suffix(4)
+
             let entries = try doc.select("ul.EntryList").select("li.item")
             let numOfEntries = entries.count
             if numOfEntries == 0 {

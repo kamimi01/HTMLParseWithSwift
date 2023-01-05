@@ -17,6 +17,7 @@
 		D443835C29595C8900620643 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443835B29595C8900620643 /* LottieView.swift */; };
 		D443835E29595CC700620643 /* empty-state.json in Resources */ = {isa = PBXBuildFile; fileRef = D443835D29595CC700620643 /* empty-state.json */; };
 		D44383602959607500620643 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = D443835F2959607500620643 /* loading.json */; };
+		D44383622959D94800620643 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44383612959D94800620643 /* Date+Extension.swift */; };
 		D4CE1A3D294D8CCA00B4CDF5 /* HTMLParserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE1A3C294D8CCA00B4CDF5 /* HTMLParserApp.swift */; };
 		D4CE1A3F294D8CCA00B4CDF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE1A3E294D8CCA00B4CDF5 /* ContentView.swift */; };
 		D4CE1A41294D8CCE00B4CDF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CE1A40294D8CCE00B4CDF5 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		D443835B29595C8900620643 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D443835D29595CC700620643 /* empty-state.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "empty-state.json"; sourceTree = "<group>"; };
 		D443835F2959607500620643 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		D44383612959D94800620643 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		D4CE1A39294D8CCA00B4CDF5 /* HTMLParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTMLParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CE1A3C294D8CCA00B4CDF5 /* HTMLParserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParserApp.swift; sourceTree = "<group>"; };
 		D4CE1A3E294D8CCA00B4CDF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				D443835029580B4100620643 /* Element+Extension.swift */,
 				D443835629592BC100620643 /* ArticleCardView.swift */,
 				D443835B29595C8900620643 /* LottieView.swift */,
+				D44383612959D94800620643 /* Date+Extension.swift */,
 			);
 			path = HTMLParser;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				D4F34E13295097A200B10B68 /* Article.swift in Sources */,
 				D443835129580B4100620643 /* Element+Extension.swift in Sources */,
 				D4F34E1A2951288A00B10B68 /* HTTPMethod.swift in Sources */,
+				D44383622959D94800620643 /* Date+Extension.swift in Sources */,
 				D4F34E1C2951291F00B10B68 /* AdventarAPI.swift in Sources */,
 				D443835C29595C8900620643 /* LottieView.swift in Sources */,
 				D4F34E16295126D300B10B68 /* AdventarClientError.swift in Sources */,
