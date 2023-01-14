@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// 12/25までのカウントダウンを行う
 struct CountDownView: View {
     var body: some View {
         HStack(alignment: .center, spacing: 20) {

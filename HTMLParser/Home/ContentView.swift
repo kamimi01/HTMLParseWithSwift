@@ -18,6 +18,7 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     CountDownView()
+                    Spacer()
                     switch viewModel.retreiveStatsu {
                     case .empty:
                         LottieView(animationType: .empty)
@@ -37,7 +38,14 @@ struct ContentView: View {
                             }
                         }
                     case .error:
-                        Text("エラーです！")
+                        VStack {
+                            Image(systemName: "exclamationmark.triangle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 80, height: 80)
+                                .foregroundColor(.orange)
+                            Text("エラーが発生しました")
+                        }
                     }
                     Spacer()
                 }
