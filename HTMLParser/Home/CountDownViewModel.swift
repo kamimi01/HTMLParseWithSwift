@@ -13,7 +13,6 @@ class CountDownViewModel: ObservableObject {
     @Published var leftMins = "-"
     @Published var leftSec = "-"
     private var timer = Timer()
-    private var time = 5
 
     func startCount() {
         // 前回のインスタンスが残っていた場合を想定して念の為削除
