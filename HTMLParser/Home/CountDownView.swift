@@ -9,7 +9,8 @@ import SwiftUI
 
 /// 12/25までのカウントダウンを行う
 struct CountDownView: View {
-    @ObservedObject var viewModel = CountDownViewModel()
+    @ObservedObject var viewModel: CountDownViewModel
+    
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
             VStack(alignment: .center, spacing: 5) {
@@ -49,6 +50,6 @@ struct CountDownView: View {
 
 struct CountDownView_Previews: PreviewProvider {
     static var previews: some View {
-        CountDownView()
+        CountDownView(viewModel: CountDownViewModel())
     }
 }

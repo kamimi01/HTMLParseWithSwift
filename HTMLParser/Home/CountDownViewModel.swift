@@ -24,6 +24,7 @@ class CountDownViewModel: ObservableObject {
             userInfo: nil,
             repeats: true
         )
+        RunLoop.main.add(timer, forMode: .common)
     }
 
     @objc private func countDownUntilChrismas() {

@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var viewModel = AdventarViewModel()
-    @State private var isShownSetting = false
+    @ObservedObject private var viewModel = AdventarViewModel()
+    // こちらで初期化しないと検索を行うときにカウントされなくなってしまう
+    @ObservedObject private var countDownViewModel = CountDownViewModel()
 
     var body: some View {
         NavigationView {
             ZStack {
                 Color(red: 255 / 255, green: 228 / 255, blue: 225 / 255)
                     .edgesIgnoringSafeArea(.all)
-                VStack {
-                    CountDownView()
+                VStack(spacing: 10) {
+                    CountDownView(viewModel: countDownViewModel)
+                        .padding(.top, 10)
                     Spacer()
                     switch viewModel.retreiveStatsu {
                     case .empty:
