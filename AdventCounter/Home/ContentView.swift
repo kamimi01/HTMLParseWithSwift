@@ -23,8 +23,11 @@ struct ContentView: View {
                     Spacer()
                     switch viewModel.retreiveStatsu {
                     case .empty:
-                        LottieView(animationType: .empty)
-                            .frame(width: 300, height: 300)
+                        VStack {
+                            LottieView(animationType: .empty)
+                                .frame(width: 300, height: 300)
+                            Text("記事がありません")
+                        }
                     case .loading:
                         LottieView(animationType: .loading)
                             .frame(width: 300, height: 300)

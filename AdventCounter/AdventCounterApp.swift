@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct HTMLParserApp: App {
+struct AdventCounterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

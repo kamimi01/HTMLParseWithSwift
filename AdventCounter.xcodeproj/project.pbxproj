@@ -19,7 +19,7 @@
 		D44383622959D94800620643 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44383612959D94800620643 /* Date+Extension.swift */; };
 		D49D1FD029677DBE0050EA60 /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1FCF29677DBE0050EA60 /* CountDownView.swift */; };
 		D49D1FD4297355680050EA60 /* CountDownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1FD3297355680050EA60 /* CountDownViewModel.swift */; };
-		D4CE1A3D294D8CCA00B4CDF5 /* HTMLParserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE1A3C294D8CCA00B4CDF5 /* HTMLParserApp.swift */; };
+		D4CE1A3D294D8CCA00B4CDF5 /* AdventCounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE1A3C294D8CCA00B4CDF5 /* AdventCounterApp.swift */; };
 		D4CE1A3F294D8CCA00B4CDF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE1A3E294D8CCA00B4CDF5 /* ContentView.swift */; };
 		D4CE1A41294D8CCE00B4CDF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CE1A40294D8CCE00B4CDF5 /* Assets.xcassets */; };
 		D4CE1A44294D8CCE00B4CDF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CE1A43294D8CCE00B4CDF5 /* Preview Assets.xcassets */; };
@@ -44,8 +44,8 @@
 		D44383612959D94800620643 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		D49D1FCF29677DBE0050EA60 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		D49D1FD3297355680050EA60 /* CountDownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownViewModel.swift; sourceTree = "<group>"; };
-		D4CE1A39294D8CCA00B4CDF5 /* HTMLParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTMLParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4CE1A3C294D8CCA00B4CDF5 /* HTMLParserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParserApp.swift; sourceTree = "<group>"; };
+		D4CE1A39294D8CCA00B4CDF5 /* AdventCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4CE1A3C294D8CCA00B4CDF5 /* AdventCounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventCounterApp.swift; sourceTree = "<group>"; };
 		D4CE1A3E294D8CCA00B4CDF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D4CE1A40294D8CCE00B4CDF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4CE1A43294D8CCE00B4CDF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		D4CE1A30294D8CCA00B4CDF5 = {
 			isa = PBXGroup;
 			children = (
-				D4CE1A3B294D8CCA00B4CDF5 /* HTMLParser */,
+				D4CE1A3B294D8CCA00B4CDF5 /* AdventCounter */,
 				D4CE1A3A294D8CCA00B4CDF5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,24 +105,24 @@
 		D4CE1A3A294D8CCA00B4CDF5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4CE1A39294D8CCA00B4CDF5 /* HTMLParser.app */,
+				D4CE1A39294D8CCA00B4CDF5 /* AdventCounter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D4CE1A3B294D8CCA00B4CDF5 /* HTMLParser */ = {
+		D4CE1A3B294D8CCA00B4CDF5 /* AdventCounter */ = {
 			isa = PBXGroup;
 			children = (
 				D49D1FCD29677BC80050EA60 /* Home */,
 				D4F34E14295125D100B10B68 /* APIClient */,
-				D4CE1A3C294D8CCA00B4CDF5 /* HTMLParserApp.swift */,
+				D4CE1A3C294D8CCA00B4CDF5 /* AdventCounterApp.swift */,
 				D4CE1A40294D8CCE00B4CDF5 /* Assets.xcassets */,
 				D443835D29595CC700620643 /* empty-state.json */,
 				D443835F2959607500620643 /* loading.json */,
 				D49D1FCE29677BFA0050EA60 /* Extension */,
 				D4CE1A42294D8CCE00B4CDF5 /* Preview Content */,
 			);
-			path = HTMLParser;
+			path = AdventCounter;
 			sourceTree = "<group>";
 		};
 		D4CE1A42294D8CCE00B4CDF5 /* Preview Content */ = {
@@ -149,9 +149,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D4CE1A38294D8CCA00B4CDF5 /* HTMLParser */ = {
+		D4CE1A38294D8CCA00B4CDF5 /* AdventCounter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4CE1A47294D8CCE00B4CDF5 /* Build configuration list for PBXNativeTarget "HTMLParser" */;
+			buildConfigurationList = D4CE1A47294D8CCE00B4CDF5 /* Build configuration list for PBXNativeTarget "AdventCounter" */;
 			buildPhases = (
 				D4CE1A35294D8CCA00B4CDF5 /* Sources */,
 				D4CE1A36294D8CCA00B4CDF5 /* Frameworks */,
@@ -161,13 +161,13 @@
 			);
 			dependencies = (
 			);
-			name = HTMLParser;
+			name = AdventCounter;
 			packageProductDependencies = (
 				D4CE1A4B294D8D1700B4CDF5 /* SwiftSoup */,
 				D443835929595C6100620643 /* Lottie */,
 			);
 			productName = HTMLParser;
-			productReference = D4CE1A39294D8CCA00B4CDF5 /* HTMLParser.app */;
+			productReference = D4CE1A39294D8CCA00B4CDF5 /* AdventCounter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -185,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D4CE1A34294D8CCA00B4CDF5 /* Build configuration list for PBXProject "HTMLParser" */;
+			buildConfigurationList = D4CE1A34294D8CCA00B4CDF5 /* Build configuration list for PBXProject "AdventCounter" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -202,7 +202,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4CE1A38294D8CCA00B4CDF5 /* HTMLParser */,
+				D4CE1A38294D8CCA00B4CDF5 /* AdventCounter */,
 			);
 		};
 /* End PBXProject section */
@@ -242,7 +242,7 @@
 				D443834B2953204800620643 /* HTTPClient.swift in Sources */,
 				D4CE1A4E294D8DAC00B4CDF5 /* AdventarViewModel.swift in Sources */,
 				D4CE1A3F294D8CCA00B4CDF5 /* ContentView.swift in Sources */,
-				D4CE1A3D294D8CCA00B4CDF5 /* HTMLParserApp.swift in Sources */,
+				D4CE1A3D294D8CCA00B4CDF5 /* AdventCounterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +370,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HTMLParser/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AdventCounter/Preview Content\"";
 				DEVELOPMENT_TEAM = 95L82PNXV3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -384,8 +384,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.HTMLParser;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.AdventCounter;
+				PRODUCT_NAME = AdventCounter;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -399,7 +399,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HTMLParser/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AdventCounter/Preview Content\"";
 				DEVELOPMENT_TEAM = 95L82PNXV3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -413,8 +413,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.HTMLParser;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.AdventCounter;
+				PRODUCT_NAME = AdventCounter;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -424,7 +424,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D4CE1A34294D8CCA00B4CDF5 /* Build configuration list for PBXProject "HTMLParser" */ = {
+		D4CE1A34294D8CCA00B4CDF5 /* Build configuration list for PBXProject "AdventCounter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4CE1A45294D8CCE00B4CDF5 /* Debug */,
@@ -433,7 +433,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4CE1A47294D8CCE00B4CDF5 /* Build configuration list for PBXNativeTarget "HTMLParser" */ = {
+		D4CE1A47294D8CCE00B4CDF5 /* Build configuration list for PBXNativeTarget "AdventCounter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4CE1A48294D8CCE00B4CDF5 /* Debug */,
