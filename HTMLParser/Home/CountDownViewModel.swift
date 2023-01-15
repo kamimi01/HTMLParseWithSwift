@@ -16,8 +16,6 @@ class CountDownViewModel: ObservableObject {
     private var time = 5
 
     func startCount() {
-        // 1秒ごとに秒を減らしていく
-        // 毎秒12/25までの残り日数を計算してそれを反映する
         // 前回のインスタンスが残っていた場合を想定して念の為削除
         timer.invalidate()
         timer = Timer.scheduledTimer(

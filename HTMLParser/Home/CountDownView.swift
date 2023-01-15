@@ -18,24 +18,28 @@ struct CountDownView: View {
                 Text("days")
                     .foregroundColor(.gray)
             }
+            .frame(width: 65)
             VStack(alignment: .center, spacing: 5) {
                 Text(viewModel.leftHours)
                     .font(.title)
                 Text("hours")
                     .foregroundColor(.gray)
             }
+            .frame(width: 65)
             VStack(alignment: .center, spacing: 5) {
                 Text(viewModel.leftMins)
                     .font(.title)
                 Text("mins")
                     .foregroundColor(.gray)
             }
+            .frame(width: 65)
             VStack(alignment: .center, spacing: 5) {
                 Text(viewModel.leftSec)
                     .font(.title)
                 Text("sec")
                     .foregroundColor(.gray)
             }
+            .frame(width: 65)
         }
         .onAppear {
             viewModel.startCount()
